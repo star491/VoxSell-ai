@@ -26,10 +26,6 @@ frontend/
 
 ## 1. Get a free Gemini API key
 
-1. Go to [Google AI Studio](https://aistudio.google.com).
-2. Click **Get API key -> Create API key**. No credit card needed.
-3. Copy the key.
-
 ## 2. Run the backend
 
 ```bash
