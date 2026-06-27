@@ -1,12 +1,58 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VoxSell AI - Live Call Console</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VoxSell AI Week 4</title>
+    <link rel="stylesheet" href="/static/styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <main class="app-shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Week 4 MVP Sprint</p>
+            <h1>VoxSell AI</h1>
+          </div>
+          <div class="status-pill" id="status">Disconnected</div>
+        </header>
+
+        <section class="voice-panel">
+          <div class="meter" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <button class="talk-button" id="talkButton" type="button" disabled>
+            Hold to talk
+          </button>
+          <div class="control-row">
+            <button id="connectButton" type="button">Connect</button>
+            <button id="stopAudioButton" type="button" disabled>Stop audio</button>
+            <button id="planButton" type="button" disabled>Plan match</button>
+            <button id="leadButton" type="button" disabled>Save lead</button>
+          </div>
+        </section>
+
+        <section class="prompt-row" aria-label="Text prompt fallback">
+          <input
+            id="textPrompt"
+            type="text"
+            placeholder="Type a fallback prompt, e.g. Save Acme as a hot lead"
+            autocomplete="off"
+          />
+          <button id="sendTextButton" type="button" disabled>Send</button>
+        </section>
+      </section>
+
+      <aside class="inspector">
+        <h2>Call Console</h2>
+        <div class="log" id="log"></div>
+      </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
   </body>
 </html>
